@@ -1,3 +1,4 @@
+import { RestComponent } from './rest/rest.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+  },
+  {
+    path: 'rest',
+    pathMatch:'full',
+    component:RestComponent
   }
 ];
 
