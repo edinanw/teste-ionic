@@ -1,16 +1,17 @@
-<table border="1">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Descrição</th>
-      <th>Categoria</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of data">
-      <td>{{item.id}}</td>
-      <td>{{item.descricao}}</td>
-      <td>{{item.cat}}</td>
-    </tr>
-  </tbody>
-</table>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Rest
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ngx-datatable
+  [rows]="rows"
+  [columns]="columns"
+  >
+  </ngx-datatable>
+</ion-content>
