@@ -1,3 +1,4 @@
+import { JwtComponent } from './jwt/jwt.component';
 import { RestComponent } from './rest/rest.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
@@ -20,6 +21,11 @@ const routes: Routes = [
     path: 'rest',
     pathMatch:'full',
     component:RestComponent
+  },
+  {
+    path: 'jwt',
+    pathMatch:'full',
+    component:JwtComponent
   }
 ];
 

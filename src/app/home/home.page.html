@@ -12,8 +12,10 @@
 <ion-content>
     <ion-card>
         <ion-button expand="block" [routerLink]="['/rest']">REST</ion-button>
-        <ion-button expand="block">JWT</ion-button>
-        <ion-button expand="block">AuthToken</ion-button>
-        <ion-button expand="block">AuthToken</ion-button>
+        <ion-button expand="block" [routerLink]="['/jwt']">JWT</ion-button>
+        <ion-button expand="block" [routerLink]="['/auth']">AuthToken</ion-button>
+        <ion-button expand="block" [routerLink]="['/native/camera']">Câmera</ion-button>
+        <ion-button expand="block" [routerLink]="['/native/qr']">QRCode</ion-button>
+        <ion-button expand="block" [routerLink]="['/native/map']">Map</ion-button>
     </ion-card>
 </ion-content>

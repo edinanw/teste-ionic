@@ -1,3 +1,5 @@
+import { JwtModule } from './jwt/jwt.module';
+import { JwtComponent } from './jwt/jwt.component';
 import { RestComponent } from './rest/rest.component';
 import { RestModule } from './rest/rest.module';
 import { NgModule } from '@angular/core';
@@ -13,14 +15,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent,RestComponent],
+  declarations: [AppComponent,RestComponent,JwtComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule,
     RestModule,
-    HttpClientModule
+    JwtModule
   ],
   providers: [
     StatusBar,

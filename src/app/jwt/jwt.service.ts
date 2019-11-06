@@ -1,23 +1,28 @@
-
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map, catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RestService {
-  
+
+export class JwtService {
+
   constructor(private http:HttpClient) { }
 
-  getRest(){
+  getToken(){
+    return localStorage.getItem('token');
+  }
+
+  setToken(){
+    
     //resolve problema de CORS
     var headers =  new HttpHeaders({
       'Content-Type': 'text/plain'
     });
 
-    return this.http.post('https://testeapirest.000webhostapp.com/api/ocorrencias',[],{headers:headers});    
-  }
+    this.http.post<{token: string}>('https://testeapirest.000webhostapp.com/api/ocorrencias',[],{headers:headers}).subscribe((data)=>{
+      localStorage.setItem('token',data.token);
+    });
 
+  }
 }
