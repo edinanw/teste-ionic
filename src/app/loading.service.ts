@@ -10,7 +10,7 @@ export class LoadingService {
 
   async show(){
     this.isLoading=true;
-     await this.loading.create({duration:3000}).then(a=>{
+     await this.loading.create().then(a=>{
       if (!this.isLoading) {
         a.dismiss();
       }else{

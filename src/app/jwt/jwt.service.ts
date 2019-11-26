@@ -20,7 +20,7 @@ export class JwtService {
       'Content-Type': 'text/plain'
     });
 
-    this.http.post<{token: string}>('https://testeapirest.000webhostapp.com/api/ocorrencias',[],{headers:headers}).subscribe((data)=>{
+    this.http.post<{token: string}>('https://testeapirest.000webhostapp.com/api/login',[],{headers:headers}).subscribe((data)=>{
       localStorage.setItem('token',data.token);
     });
 

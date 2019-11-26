@@ -3,17 +3,17 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { RestComponent } from './rest.component';
+
+import { AjaxComponent } from './ajax.component';
 
 @NgModule({
-  declarations: [RestComponent],
+  declarations: [AjaxComponent],
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    NgxDatatableModule,
-    RouterModule.forChild([{ path: '', component: RestComponent}])
+    RouterModule.forChild([{ path: '', component: AjaxComponent}])
   ]
 })
-export class RestModule { }
+
+export class AjaxModule { }

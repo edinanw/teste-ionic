@@ -1,17 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>
-      Rest
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 <ion-content>
-  <ngx-datatable
-  [rows]="rows"
-  [columns]="columns"
-  >
-  </ngx-datatable>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Dados
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ngx-datatable class="material" [columnMode]="'force'" [headerHeight]="50" [scrollbarH]="true" [limit]="2"
+        [footerHeight]="50" [rowHeight]="'auto'" [rows]="rows" [columns]="columns">
+      </ngx-datatable>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button routerDirection="back">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-fab-button>
+</ion-fab>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Login</ion-title>
+    <ion-button (click)="closeLoginModal()" slot="end" fill="clear" color="dark">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <form [formGroup]="loginForm" (ngSubmit)="logar(loginForm.value)" >
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">  
+      <ion-item>
+        <ion-label required position="floating">Usuário</ion-label>
+        <ion-input required type="text" formControlName="usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label required position="floating">Senha</ion-label>
+        <ion-input required type="password" formControlName="senha"></ion-input>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-button expand="block" type="submit">
+      Logar
+    </ion-button>
+  </form>
+
+</ion-content>
